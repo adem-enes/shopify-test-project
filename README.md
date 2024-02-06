@@ -13,3 +13,12 @@ Run the `npm install` command separately in the server and client folders to ins
 ## Usage
 
 After starting the application, you can access the client side’s address from your browser. You will see the meta title and meta description values of the product with the id value that I specified in the `Preferences` component among the products that I created in the Shopify store. There is an edit button below these values. To save the changes, just click the save button. The changes will be reflected to the Shopify API immediately.
+
+This is how our frontend looks like
+![App Frontend](./docs/App%20Frontend.png)
+
+These images are the changes on Shopify app that we made on our frontend
+![Shopify Title](./docs/Shopify%20Title.png)
+![Shopify Page](./docs/Shopify%20Page.png)
+
+You can see changes on html page.
