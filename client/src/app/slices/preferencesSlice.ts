@@ -54,6 +54,9 @@ export const preferencesSlice = createSlice({
             state.loading = false;
         });
 
+        builder.addCase(updatePreferences.pending, (state) => {
+            state.loading = true;
+        })
         builder.addCase(updatePreferences.fulfilled, (state, action: PayloadAction<any>) => {
             const metafields = action.payload.metafields;
             state.preferences = {
@@ -61,6 +64,7 @@ export const preferencesSlice = createSlice({
                 title: metafields.find((item: any) => item.key === 'title_tag').value,
                 description: metafields.find((item: any) => item.key === 'description_tag').value
             };
+            state.loading = false;
         })
     }
 })

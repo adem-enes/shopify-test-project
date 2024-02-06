@@ -5,7 +5,7 @@ import { getPreferences, updatePreferences } from '../app/slices/preferencesSlic
 import { PreferencesType } from '..';
 
 const Preferences = () => {
-  const { preferences } = useAppSelector(state => state.preferences);
+  const { preferences, loading } = useAppSelector(state => state.preferences);
   const [title, setTitle] = useState<string>('');
   const [description, setDescription] = useState<string>('');
   const dispatch = useAppDispatch();
@@ -59,7 +59,7 @@ const Preferences = () => {
                   autoComplete="off" placeholder='Enter a description to get a better ranking on search engines like Google'
                   maxLength={320} helpText={`${description.length} of 320 characters used`} multiline={4}
                 />
-                <Button submit fullWidth>Update</Button>
+                <Button submit fullWidth loading={loading} disabled={loading}>{!loading ? "Update" : ""}</Button>
               </FormLayout>
             </Form>
           </Card>
