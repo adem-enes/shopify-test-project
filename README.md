@@ -8,7 +8,7 @@ To run the project, you need to have Nodejs and npm installed. You also need a S
 
 After cloning the project, rename the`.env.example` files in the server folders to  `.env` nd enter the required information. The server side requires the API keys and password of your Shopify store, while the client side requires the port number that the server side runs on.
 
-Run the `npm install` command separately in the server and client folders to install the dependencies. Then run the `npm start` command in both folders to start the application. The client side will run on `http://localhost:3000` by default, while the server side will run on `http://localhost:5000`.
+Run the `npm install` command separately in the server and client folders to install the dependencies. Then run the `npm start` command in server and `npm run dev` command on client to start the application. The client side will run on `http://localhost:5173` by default(it can change), while the server side will run on `http://localhost:5000`.
 
 ## Usage
 
